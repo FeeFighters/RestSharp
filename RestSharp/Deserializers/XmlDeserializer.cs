@@ -294,7 +294,8 @@ namespace RestSharp.Deserializers
 				{
 					if (!element.IsEmpty || element.HasElements || element.HasAttributes)
 					{
-						val = element.Value;
+						if (element.Value != String.Empty)
+						    val = element.Value;
 					}
 				}
 			}
